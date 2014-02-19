@@ -13,7 +13,11 @@
   <input type="button" value="react" ng-click="createArray(reactArray)" />
   <input type="button" value="reset" ng-click="reset()" />
 
-  <div ng-repeat="value in angularArray">
+  <div id="results">
+
+  </div>
+
+  <div ng-repeat="value in angularArray" post-repeat-directive>
     <p>{{value.text}}</p>
   </div>
 
@@ -21,9 +25,8 @@
     <div id="reactResults"></div>
   </react-repeater>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-route.js"></script>
   <script src="js/app.js"></script>

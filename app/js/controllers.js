@@ -11,6 +11,7 @@ angular.module('myApp.controllers', []).
 
 
   	$scope.createArray = function(a){
+  		$scope.startTime = new Date();  		
   		for(var i=0; i<$scope.amount; i++){
   			a.push({text: 'hello'});
   		}
@@ -19,6 +20,7 @@ angular.module('myApp.controllers', []).
   	$scope.reset = function(){
   		$scope.angularArray = [];
   		$scope.reactArray = [];
+  		$('#results').text("");             
   	};
 
   }])
