@@ -31,7 +31,7 @@ angular.module('myApp.directives', [])
         if (scope.$last){        	
          $timeout(function(){             
              var end = new Date();             
-             $('#results').text("## DOM rendering list took: " + (end - scope.startTime) + " ms");                          
+             $('#results').text("## Angular rendering list took: " + (end - scope.startTime) + " ms");                          
          });
        }
       }
