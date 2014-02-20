@@ -11,6 +11,7 @@
   <input type="text" value="100" ng-model="amount" />
   <input type="button" value="angular"  ng-click="createArray(angularArray)" />
   <input type="button" value="react" ng-click="createArray(reactArray)" />
+  <input type="button" value="riot" ng-click="createArray(riotArray)" />
   <input type="button" value="reset" ng-click="reset()" />
 
   <div id="results">
@@ -25,10 +26,20 @@
     <div id="reactResults"></div>
   </react-repeater>
 
+  <script type="html/riot">
+    <p>{text}</p>
+  </script>
+
+  <riot-repeater>
+    <div id="riotResults"></div>
+  </riot-repeater>
+
+
   
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-route.js"></script>
+  <script src="lib/riotjs/riot.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>
