@@ -8,6 +8,7 @@ angular.module('myApp.controllers', []).
   	$scope.amount = 100;
   	$scope.angularArray = [];
   	$scope.reactArray = [];
+    $scope.riotArray = [];
 
 
   	$scope.createArray = function(a){
@@ -20,6 +21,7 @@ angular.module('myApp.controllers', []).
   	$scope.reset = function(){
   		$scope.angularArray = [];
   		$scope.reactArray = [];
+      $scope.riotArray = [];
   		$('#results').text("");             
   	};
 

@@ -24,6 +24,30 @@ angular.module('myApp.directives', [])
       }
     }
   }])
+  .directive('riotRepeater', [function() {
+    return {
+      restrict: 'E',
+      link: function(scope, element) {
+        scope.$watch('riotArray', function(newVal, oldVal) {
+
+          var root = $("#riotResults"),
+            template = $("[type='html/riot']").html()
+
+            root.empty();
+            for(var i = 0; i < scope.riotArray.length; i++) {
+              $($.render(template, scope.riotArray[i])).appendTo(root);
+            }
+
+            var end = new Date();          
+            if (scope.riotArray.length > 0){
+              $('#results').text("## Riot rendering list took: " + (end - scope.startTime) + " ms");     
+            }
+          
+        }, true);
+        
+      }
+    }
+  }])
  .directive('postRepeatDirective', ['$timeout',  function($timeout) {
  	 return {      
       link: function(scope, element) {
