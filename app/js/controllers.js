@@ -18,6 +18,10 @@ angular.module('myApp.controllers', []).
   		}
   	};
 
+
+    //React.renderComponent(ReactArray(null), document.getElementById('properReact'));
+    React.renderComponent(ReactArray({}), document.getElementById('properReact'));
+
   	$scope.reset = function(){
   		$scope.angularArray = [];
   		$scope.reactArray = [];
